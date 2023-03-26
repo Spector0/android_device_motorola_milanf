@@ -23,7 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=420
 
 # Device path
-DEVICE_PATH := device/motorola/milanf/rootdir
+DEVICE_PATH := device/oneplus/oscar/rootdir
 
 # Device Init
 PRODUCT_PACKAGES += \
@@ -52,8 +52,9 @@ TARGET_USES_PN5XX_PN8X_NFC := true
 # Power
 TARGET_IS_BLAIR := true
 
+# TODO:
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm4350-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/milanf/milanf-vendor.mk)
+$(call inherit-product-if-exists, vendor/oneplus/oscar/oscar-vendor.mk)
